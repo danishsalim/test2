@@ -1,11 +1,18 @@
-import React,{useContext} from 'react'
+/* eslint-disable react/prop-types */
+import {useContext} from 'react'
 import CartContext from '../../store/CartContext'
 import Modal from "../UI/Modal"
 import CartItem from "./CartItem"
 import "./Cart.css"
 
 const Cart = (props) => {
- const {cartItems} =useContext(CartContext)
+ const {cartItems,setCartItems,setTotalItemsInCart} =useContext(CartContext)
+ const handleOrder=()=>{
+    setCartItems([])
+    setTotalItemsInCart(0)
+    props.onClose();
+    console.log("Your order has been placed ! Thankyou !!!")
+ }
  let total=0;
  const cart = <ul>
                 {cartItems.map((item)=>{
@@ -23,7 +30,7 @@ const Cart = (props) => {
             <div className='totalAmount'>Total Amount : ${total}</div>
             <div className='buttons'>
                 <button onClick={props.onClose}>close</button>
-                <button>placeOrder</button>
+                <button onClick={()=>handleOrder()}>placeOrder</button>
             </div>
         </div> 
         

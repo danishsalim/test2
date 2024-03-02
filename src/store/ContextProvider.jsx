@@ -80,7 +80,9 @@ const ContextProvider = (props) => {
     addItem:addItem,
     handleItemAvailability:handleItemAvailability,
     cartItems:cartItems,
+    setCartItems:setCartItems,
     totalItemsInCart:totalItemsInCart,
+    setTotalItemsInCart:setTotalItemsInCart,
    }
 
   return (
