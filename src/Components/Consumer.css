@@ -7,5 +7,17 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-right:6rem ;
+    margin:0 auto;
+}
+.size{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.desc{
+    width: 13rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
 }

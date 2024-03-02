@@ -7,7 +7,7 @@ const Admin = () => {
 
     const handleSubmit = (e) =>{
         e.preventDefault()
-        const id = parseInt(Math.random()*10)
+        const id = parseInt(Math.random()*100)
         const data= {
             id:id,
             name:e.target.name.value,
@@ -18,6 +18,7 @@ const Admin = () => {
             small:parseInt(e.target.s.value),
         }
         addItem(data)
+        e.target.reset()
     }
 
   return (
@@ -25,15 +26,15 @@ const Admin = () => {
         <form onSubmit={handleSubmit}>
             <div className='shell'>
                 <label htmlFor='name'>Name</label>
-                <input type='text' id='name' required />
+                <input type='text' id='name'  />
             </div>
             <div className='shell'>
                 <label htmlFor='desc'>Description</label>
-                <input type='text' id='desc' required />
+                <input type='text' id='desc'  />
             </div >
             <div className='shell'>
                 <label htmlFor='price'>Price</label>
-                <input type='number' id='price' required />
+                <input type='number' id='price'  />
             </div>
             <div className='shell size'>
                 <label htmlFor='l'>L</label>

@@ -5,9 +5,9 @@ form{
     align-items: center;
     
 }
-input{
+/* input{
     width: auto;
-}
+} */
 
 .shell{
     display: flex;
